@@ -58,22 +58,17 @@ export default function Home() {
       </div>
 
       {/* Moodle & Google Classroom Integration */}
-      <div className="relative z-[2] flex-row items-center gap-4 px-[11px] pt-[12px] pb-[11px]">
-        <span className="text-ink-mute margin-right-2 text-sm">
-          {' '}
-          Works with{' '}
-        </span>
+      <div className="relative z-[2] flex items-center gap-4 px-11 pt-12 pb-11">
+        <span className="text-ink-mute mr-2 text-sm"> Works with </span>
 
-        <div className="background-white text-ink-mid flex-row items-center gap-[7px] rounded-full border-[1px] px-[14px] text-[12.5px] font-medium">
-          <div className="square h-[18px] w-[18px] rounded-sm bg-[#4285F4]">
-            Google Classroom
-          </div>
+        <div className="text-ink-mid flex items-center gap-[7px] rounded-full border-[1px] bg-white px-[14px] text-[12.5px] font-medium">
+          <div className="size-[18px] rounded-sm bg-[#4285F4]" />
+          Google Classroom
         </div>
 
-        <div className="background-white text-ink-mid flex-row items-center gap-[7px] rounded-full border-[1px] px-[14px] text-[12.5px] font-medium">
-          <div className="square h-[18px] w-[18px] rounded-sm bg-[#F98012]">
-            Moodle
-          </div>
+        <div className="text-ink-mid flex items-center gap-[7px] rounded-full border-[1px] bg-white px-[14px] text-[12.5px] font-medium">
+          <div className="size-[18px] rounded-sm bg-[#F98012]" />
+          Moodle
         </div>
       </div>
     </div>
