@@ -103,6 +103,94 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* Video Demo Section */}
+      <section className="bg-[#ECEAF5] px-11 py-24">
+        <div className="mx-auto flex aspect-video max-w-[720px] items-center justify-center rounded-[20px] bg-white">
+          <div className="text-ink-mute text-[48px]">▶</div>
+        </div>
+      </section>
+
+      {/* About / Founder Section */}
+      <section className="bg-[#ECEAF5] px-11 py-24">
+        <div className="mx-auto flex max-w-[860px] items-center gap-16">
+          <img
+            src="/dylan-brooks.jpg"
+            alt="Dylan Brooks"
+            className="size-[220px] flex-shrink-0 rounded-full object-cover"
+          />
+          {/* Bio */}
+          <div>
+            <p className="text-ink-mute mb-1 text-xs font-medium tracking-widest uppercase">
+              Founder of PlanIt
+            </p>
+            <h2 className="text-ink mb-4 font-serif text-[36px] leading-tight">
+              Dylan Brooks
+            </h2>
+            <p className="text-ink-mid mb-6 max-w-[420px] text-[16px] leading-[1.7]">
+              CS Major. I built PlanIt because juggling assignments across
+              Google Classroom and Moodle was a mess — one place for everything
+              just made sense.
+            </p>
+            <a
+              href="https://dylan-brooks2.github.io/Dylan-Brooks-Portfolio/"
+              className="text-deep-purple text-[14px] font-medium underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View portfolio →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-bg border-t border-[rgba(107,95,175,0.12)] px-11 py-10">
+        <div className="mx-auto max-w-[1100px]">
+          {/* Top row */}
+          <div className="mb-8 flex items-center justify-between">
+            {/* Logo */}
+            <div className="text-deep-purple font-serif text-[22px]">
+              Plan<span className="text-sage">It</span>
+            </div>
+            {/* LinkedIn */}
+            <a
+              href="https://linkedin.com/in/dylan-brooks"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-ink-mute hover:text-deep-purple text-sm no-underline transition-colors"
+            >
+              LinkedIn →
+            </a>
+          </div>
+
+          {/* Bottom row */}
+          <div className="flex items-center justify-between border-t border-[rgba(107,95,175,0.08)] pt-6">
+            <p className="text-ink-mute text-xs">
+              © 2026 PlanIt. All rights reserved.
+            </p>
+            <div className="flex gap-6">
+              <a
+                href="mailto:dylanbrooks0215@gmail.com"
+                className="text-ink-mute hover:text-deep-purple text-xs no-underline transition-colors"
+              >
+                Contact
+              </a>
+              <a
+                href="#"
+                className="text-ink-mute hover:text-deep-purple text-xs no-underline transition-colors"
+              >
+                Privacy Policy
+              </a>
+              <a
+                href="#"
+                className="text-ink-mute hover:text-deep-purple text-xs no-underline transition-colors"
+              >
+                Terms of Use
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </>
   )
 }

@@ -3,6 +3,7 @@ import path from "path";
 
 const nextConfig: NextConfig = {
   outputFileTracingRoot: path.join(__dirname, "../"),
+  turbopack: {},
   webpack: (config) => {
     config.watchOptions = {
       poll: 1000,
