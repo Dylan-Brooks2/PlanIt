@@ -154,7 +154,7 @@ export default function Home() {
             </div>
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com/in/dylan-brooks"
+              href="https://www.linkedin.com/in/dylan-brooks-7870a5232/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-ink-mute hover:text-deep-purple text-sm no-underline transition-colors"
