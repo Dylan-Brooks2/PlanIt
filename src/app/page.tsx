@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Home() {
   return (
     <>
@@ -14,9 +16,12 @@ export default function Home() {
             About
           </a>
         </div>
-        <button className="bg-deep-purple cursor-pointer rounded-full px-5 py-2 font-sans text-[13.5px] font-medium text-white">
+        <Link
+          href="/login"
+          className="bg-deep-purple cursor-pointer rounded-full px-5 py-2 font-sans text-[13.5px] font-medium text-white"
+        >
           Get started
-        </button>
+        </Link>
       </nav>
 
       {/* Hero card — pt-24 pushes content below the fixed nav */}
@@ -50,9 +55,12 @@ export default function Home() {
 
           {/* CTA buttons */}
           <div className="flex items-center gap-4">
-            <button className="bg-deep-purple cursor-pointer rounded-full px-7 py-3 font-sans text-[14.5px] font-medium text-white">
+            <Link
+              href="/login"
+              className="bg-deep-purple cursor-pointer rounded-full px-7 py-3 font-sans text-[14.5px] font-medium text-white"
+            >
               Connect your LMS
-            </button>
+            </Link>
             <button className="text-ink-mid flex cursor-pointer items-center gap-1.5 border-none bg-transparent font-sans text-sm">
               <span className="text-[18px]">▶</span> See how it works
             </button>
