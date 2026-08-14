@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 export default function Login() {
   const [activeTab, setActiveTab] = useState('login')
+  const [termsAccepted, setTermsAccepted] = useState(false)
 
   return (
     <>
@@ -43,6 +44,21 @@ export default function Login() {
             </button>
           </div>
           <div className="mb-6 flex flex-col gap-3">
+            {activeTab === 'signup' && (
+              <div className="flex gap-3">
+                <input
+                  type="text"
+                  placeholder="First Name"
+                  className="text-ink w-full rounded-[12px] border bg-white/70 px-4 py-3 text-sm outline-none"
+                />
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  className="text-ink w-full rounded-[12px] border bg-white/70 px-4 py-3 text-sm outline-none"
+                />
+              </div>
+            )}
+
             <input
               type="email"
               placeholder="Email Address"
@@ -53,9 +69,30 @@ export default function Login() {
               placeholder="Password"
               className="text-ink w-full rounded-[12px] border bg-white/70 px-4 py-3 text-sm outline-none"
             />
+            {activeTab === 'signup' && (
+              <label className="text-ink-mute flex items-center gap-2 text-xs">
+                <input
+                  type="checkbox"
+                  className="accent-deep-purple"
+                  checked={termsAccepted}
+                  onChange={(e) => setTermsAccepted(e.target.checked)}
+                />
+                I agree to the{' '}
+                <a href="#" className="text-deep-purple underline">
+                  Terms and Conditions
+                </a>
+                .
+              </label>
+            )}
           </div>
-          <button className="bg-deep-purple mb-4 w-full cursor-pointer rounded-full py-3 text-sm font-medium text-white">
-            Log In
+          <button
+            className={`mb-4 w-full rounded-full py-3 text-sm font-medium text-white disabled:cursor-not-allowed disabled:opacity-50 ${
+              activeTab === 'signup' && !termsAccepted
+                ? 'bg-ink-mute'
+                : 'bg-deep-purple cursor-pointer'
+            }`}
+          >
+            {activeTab === 'login' ? 'Log In' : 'Create Account'}
           </button>
           {/* Divider and Google Sign In */}
           <button className="text-ink-mid flex w-full cursor-pointer items-center justify-center gap-2 rounded-full border bg-white/70 py-3 text-sm">
